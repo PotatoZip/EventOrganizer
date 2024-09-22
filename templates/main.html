@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
-<!--    <link rel="stylesheet" type="text/css" media="screen" href="main.css">-->
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/main.css' %}">
   </head>
   <body>
     {% include 'navbar.html' %}
@@ -13,10 +14,12 @@
     {% if messages %}
       <ul class="messages">
           {% for message in messages %}
-          <li></li> {{ message}}</li>
+          <li>{{ message }}</li>
           {% endfor %}
       </ul>
     {% endif %}
+
+<!--    <img src="{% static 'images/handshake.png' %}"/>-->
 
     {% block content %}
 
