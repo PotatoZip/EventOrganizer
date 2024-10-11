@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- {% load static %} -->
+{% load static %}
 <html>
   <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Organizer</title>
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/main.css' %}"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/main.css' %}">
   </head>
   <body>
     {% include 'navbar.html' %}
@@ -19,6 +19,7 @@
       </ul>
     {% endif %}
 
+    <!-- <img src="{% static 'images/handshake.png' %}"/> -->
 
     {% block content %}
 
